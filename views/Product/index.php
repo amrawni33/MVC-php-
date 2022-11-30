@@ -29,10 +29,10 @@
                             <td class="text-center"><?php echo $row['description']; ?></td>
                             <td><?php echo $row['qty']; ?></td>
                             <td>
-                                <a href="<?php url('/product/edit/' . $row['id']) ?>" class="btn btn-info">Edit</a>
+                                <a href="<?php url('product/edit/' . $row['id']) ?>" class="btn btn-info">Edit</a>
                             </td>
                             <td>
-                                <a href="<?php url('/product/delete/' . $row['id']) ?>" class="btn btn-danger">Delete</a>
+                                <a href="<?php url('product/delete/' . $row['id']) ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
