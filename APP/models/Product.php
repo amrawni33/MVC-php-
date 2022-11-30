@@ -22,4 +22,9 @@ class Product extends DB
     {
         return $this->conn->insert($this->table, $data);
     }
+
+    public function deleteProduct($id){
+        $db = $this->conn->where('id', $id);
+        return $db->delete($this->table);
+    }
 }

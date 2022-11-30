@@ -34,10 +34,19 @@ class ProductController
             $db = new product();
 
             if ($db->insertProduct($data)) {
-                View::load('product/add',["success"=>"Data Inserted successfuly."]);
+                View::load('product/add', ["success" => "Data Inserted successfuly."]);
             } else {
                 View::load('product/add');
             }
+        }
+    }
+    public function delete($id)
+    {
+        $db = new product();
+        if ($db->deleteProduct($id)) {
+            View::load('product/delete', ["success" => "Data deleted successfuly."]);
+        } else {
+            View::load('product/delete');
         }
     }
 }
